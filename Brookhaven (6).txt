@@ -8,7 +8,7 @@ NotificationLoad:NewNotification({
 
     ["Title"] = "Hey All AstroX user!", -- Title of notification
 
-    ["Description"] = "i very very sorry for This shit script i will fix All error and this shit UI will change to Easy UI with no errors ", -- Description of notification
+    ["Description"] = "i very very sorry 💔for This shit script i will fix All error and this shit UI will change to Easy UI with no errors, and thanks for use script ❤️", -- Description of notification
 
     ["Notification_Image"] = "rbxassetid://", -- Side image of notification
 
