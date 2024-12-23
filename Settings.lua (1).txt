@@ -1,7 +1,7 @@
 local _env = getgenv and getgenv() or {}
 
 local Ver = "Version: [ Beta ] "
-local Tele = ""
+local Tele = "https://t.me/+d0_Qpyb7-xowYWI6"
 
 _env.Telegram = Tele
 _env.Version = Ver
