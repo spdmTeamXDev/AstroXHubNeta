@@ -212,10 +212,7 @@ New.MouseButton1Click:Connect(function()
 	pcall(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/english%20.txt'))(
        "https://t.me/AstroXHub"
-)
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/AntiBang'))(
-       "https://t.me/AstroXHub"
-)
+) 
 	end)
 end)
 
@@ -223,9 +220,6 @@ Old.MouseButton1Click:Connect(function()
 	starteffect()
 	pcall(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/ara.txt'))(
-       "https://t.me/AstroXHub"
-)
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/AntiBang'))(
        "https://t.me/AstroXHub"
 )
 	end)
