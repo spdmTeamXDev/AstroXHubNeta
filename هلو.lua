@@ -210,10 +210,7 @@ end
 New.MouseButton1Click:Connect(function()
 	starteffect()
 	pcall(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/en.txt'))(
-       "https://t.me/AstroXHub"
-)
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/AntiBang'))(
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/Protected_6342086642079824.txt'))(
        "https://t.me/AstroXHub"
 )
 	end)
