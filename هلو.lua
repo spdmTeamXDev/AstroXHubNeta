@@ -210,19 +210,16 @@ end
 New.MouseButton1Click:Connect(function()
 	starteffect()
 	pcall(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/AstroXHubNeta/refs/heads/main/englia.txt'))(
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/StackFlow/refs/heads/main/%D8%B9%D8%B1%D8%A8%D9%8A.txt'))(
        "https://t.me/AstroXHub"
-)
+) 
 	end)
 end)
 
 Old.MouseButton1Click:Connect(function()
 	starteffect()
 	pcall(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/AstroXHubNeta/refs/heads/main/arabic.txt'))(
-       "https://t.me/AstroXHub"
-)
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/AntiBang'))(
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/StackFlow/refs/heads/main/%D8%A7%D9%86%D9%83%D9%84%D9%8A%D8%B7%D9%8A.txt'))(
        "https://t.me/AstroXHub"
 )
 	end)
