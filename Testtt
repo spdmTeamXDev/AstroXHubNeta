@@ -219,7 +219,7 @@ end)
 Old.MouseButton1Click:Connect(function()
 	starteffect()
 	pcall(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/ara.txt'))(
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/Protected_1459779125681128.txt'))(
        "https://t.me/AstroXHub"
 ) 
 	end)
