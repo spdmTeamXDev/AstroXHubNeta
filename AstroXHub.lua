@@ -1,229 +1,288 @@
 local TranslationModule = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/loader%20(3).txt')))()
 local placeId = game.PlaceId
 if placeId == 4924922222 then
-		local ScreenGui = Instance.new("ScreenGui")
+local Alert = loadstring(game:HttpGet("https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/Alert"))()
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
+local TopBar = Instance.new("Folder")
+local TextLabel = Instance.new("TextLabel")
+local Close = Instance.new("ImageButton")
+local Shadow = Instance.new("Folder")
+local DropShadowHolder = Instance.new("Frame")
 local DropShadow = Instance.new("ImageLabel")
-local Title = Instance.new("TextLabel")
-local Title_2 = Instance.new("TextLabel")
-local Log = Instance.new("Frame")
+local Items = Instance.new("Folder")
+local ScrollingFrame = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
-local Old = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-local New = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local UIStroke_2 = Instance.new("UIStroke")
-local Hiden = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local Title_3 = Instance.new("TextLabel")
 
 ScreenGui.Parent = game.CoreGui
-ScreenGui.ResetOnSpawn = false
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
-ScreenGui.IgnoreGuiInset = true
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.ClipsDescendants = true
-Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame.Size = UDim2.new(0,0,0,0)
-Frame.ZIndex = 2
+Frame.Position = UDim2.new(0.49969098, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 515, 0, 294)
 
-game:GetService('TweenService'):Create(Frame,TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.Out),{Size=UDim2.new(0.100000001, 200, 0.100000001, 125),Rotation=0}):Play()
-
-UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
 
+TopBar.Name = "TopBar"
+TopBar.Parent = Frame
+
+TextLabel.Parent = TopBar
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, 0, 0.0663265288, 0)
+TextLabel.Size = UDim2.new(0, 515, 0, 39)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "AstroXHub [ Loader ]"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 18.000
+
+Close.Name = "Close"
+Close.Parent = TopBar
+Close.AnchorPoint = Vector2.new(0.5, 0.5)
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.963106811, 0, 0.0646258518, 0)
+Close.Size = UDim2.new(0, 24, 0, 24)
+Close.Image = "rbxassetid://11353098054"
+
+Shadow.Name = "Shadow"
+Shadow.Parent = Frame
+
+DropShadowHolder.Name = "DropShadowHolder"
+DropShadowHolder.Parent = Shadow
+DropShadowHolder.BackgroundTransparency = 1.000
+DropShadowHolder.BorderSizePixel = 0
+DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder.ZIndex = 0
+
 DropShadow.Name = "DropShadow"
-DropShadow.Parent = Frame
+DropShadow.Parent = DropShadowHolder
 DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
 DropShadow.BackgroundTransparency = 1.000
 DropShadow.BorderSizePixel = 0
 DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
-DropShadow.Rotation = 0.001
 DropShadow.Size = UDim2.new(1, 47, 1, 47)
-DropShadow.ZIndex = -2
+DropShadow.ZIndex = 0
 DropShadow.Image = "rbxassetid://6014261993"
 DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
 DropShadow.ImageTransparency = 0.500
 DropShadow.ScaleType = Enum.ScaleType.Slice
 DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
 
-Title.Name = "Title"
-Title.Parent = Frame
-Title.AnchorPoint = Vector2.new(0.5, 0)
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.5, 0, 0.0500000007, 0)
-Title.Size = UDim2.new(0.899999976, 0, 0.200000003, 0)
-Title.ZIndex = 4
-Title.Font = Enum.Font.RobotoMono
-Title.Text = "AstroXHub - Brookhaven "
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextScaled = true
-Title.TextSize = 14.000
-Title.TextWrapped = true
+Items.Name = "Items"
+Items.Parent = Frame
 
-Title_2.Name = "Title"
-Title_2.Parent = Frame
-Title_2.AnchorPoint = Vector2.new(0.5, 0)
-Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title_2.BackgroundTransparency = 1.000
-Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title_2.BorderSizePixel = 0
-Title_2.Position = UDim2.new(0.5, 0, 0.245779857, 0)
-Title_2.Size = UDim2.new(0.899999857, 0, 0.123863392, 0)
-Title_2.ZIndex = 4
-Title_2.Font = Enum.Font.RobotoMono
-Title_2.Text = "Choose a script language\n اختار لغة السكربت "
-Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_2.TextScaled = true
-Title_2.TextSize = 14.000
-Title_2.TextTransparency = 0.300
-Title_2.TextWrapped = true
+ScrollingFrame.Parent = Items
+ScrollingFrame.Active = true
+ScrollingFrame.AnchorPoint = Vector2.new(0.5, 1)
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.5009709, 0, 1, 0)
+ScrollingFrame.Size = UDim2.new(0, 515, 0, 255)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 94)
+ScrollingFrame.ScrollBarThickness = 2
 
-Log.Name = "Log"
-Log.Parent = Frame
-Log.AnchorPoint = Vector2.new(0.5, 0)
-Log.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Log.BackgroundTransparency = 1.000
-Log.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Log.BorderSizePixel = 0
-Log.Position = UDim2.new(0.50000006, 0, 0.456819654, 0)
-Log.Size = UDim2.new(0.899999976, 0, 0.5, 0)
-Log.ZIndex = 4
-
-UIListLayout.Parent = Log
-UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout.Parent = ScrollingFrame
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
-UIListLayout.Padding = UDim.new(0, 10)
+UIListLayout.Padding = UDim.new(0, 5)
 
-Old.Name = "Old"
-Old.Parent = Log
-Old.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Old.BackgroundTransparency = 0.950
-Old.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Old.BorderSizePixel = 0
-Old.Position = UDim2.new(-0.00932140276, 0, 0.250000179, 0)
-Old.Size = UDim2.new(0.444071531, 0, 0.423863351, 0)
-Old.ZIndex = 5
-Old.Font = Enum.Font.RobotoMono
-Old.Text = "Arabic"
-Old.TextColor3 = Color3.fromRGB(255, 255, 255)
-Old.TextScaled = true
-Old.TextSize = 14.000
-Old.TextWrapped = true
+UIListLayout:GetPropertyChangedSignal('AbsoluteContentSize'):Connect(function()
+    ScrollingFrame.CanvasSize = UDim2.formOffset(0,UIListLayout.AbsoluteContentSize.Y)
+end)
 
-UICorner_2.CornerRadius = UDim.new(0, 3)
-UICorner_2.Parent = Old
+Close.MouseButton1Click:Connect(function()
+    ScreenGui.Enabled = false
+end)
 
-UIStroke.Color = Color3.fromRGB(40, 40, 40)
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke.Parent = Old
+local add = {
+    header = function(text)
+        local Header = Instance.new("TextLabel")
+        local Line = Instance.new("Frame")
+        local Line_2 = Instance.new("Frame")
 
-New.Name = "New"
-New.Parent = Log
-New.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-New.BackgroundTransparency = 0.950
-New.BorderColor3 = Color3.fromRGB(0, 0, 0)
-New.BorderSizePixel = 0
-New.Size = UDim2.new(0.444000006, 0, 0.423999995, 0)
-New.ZIndex = 5
-New.Font = Enum.Font.RobotoMono
-New.Text = "English "
-New.TextColor3 = Color3.fromRGB(255, 255, 255)
-New.TextScaled = true
-New.TextSize = 14.000
-New.TextWrapped = true
+        Header.Name = "Header"
+        Header.Parent = ScrollingFrame
+        Header.AnchorPoint = Vector2.new(0.5, 0.5)
+        Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Header.BackgroundTransparency = 1.000
+        Header.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        Header.BorderSizePixel = 0
+        Header.Position = UDim2.new(0.5, 0, 0.178571433, 0)
+        Header.Size = UDim2.new(0, 515, 0, 27)
+        Header.Font = Enum.Font.SourceSansBold
+        Header.Text = tostring(text)
+        Header.TextColor3 = Color3.fromRGB(0, 255, 127)
+        Header.TextSize = 18.000
 
-UICorner_3.CornerRadius = UDim.new(0, 3)
-UICorner_3.Parent = New
+        Line.Name = "Line"
+        Line.Parent = Header
+        Line.AnchorPoint = Vector2.new(0.5, 0.5)
+        Line.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+        Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        Line.BorderSizePixel = 0
+        Line.Position = UDim2.new(0.699999988, 0, 0.5, 0)
+        Line.Size = UDim2.new(0, 100, 0, 1)
 
-UIStroke_2.Color = Color3.fromRGB(40, 40, 40)
-UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke_2.Parent = New
+        Line_2.Name = "Line"
+        Line_2.Parent = Header
+        Line_2.AnchorPoint = Vector2.new(0.5, 0.5)
+        Line_2.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+        Line_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        Line_2.BorderSizePixel = 0
+        Line_2.Position = UDim2.new(0.300000012, 0, 0.5, 0)
+        Line_2.Size = UDim2.new(0, 100, 0, 1)
+    end,
+    text = function(text)
+        local Text = Instance.new("TextLabel")
 
-Hiden.Name = "Hiden"
-Hiden.Parent = Frame
-Hiden.AnchorPoint = Vector2.new(0.5, 0.5)
-Hiden.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Hiden.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Hiden.BorderSizePixel = 0
-Hiden.Position = UDim2.new(0.5, 0, 1.5, 0)
-Hiden.Size = UDim2.new(1, 0, 1, 0)
-Hiden.ZIndex = 10
+        Text.Name = "Text"
+        Text.Parent = ScrollingFrame
+        Text.AnchorPoint = Vector2.new(0.5, 0.5)
+        Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Text.BackgroundTransparency = 1.000
+        Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        Text.BorderSizePixel = 0
+        Text.Position = UDim2.new(0.5, 0, 0.166666672, 0)
+        Text.Size = UDim2.new(0, 393, 0, 21)
+        Text.Font = Enum.Font.SourceSansBold
+        Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+        Text.TextSize = 14.000
+        Text.Text = tostring(text)
 
-UICorner_4.CornerRadius = UDim.new(0, 3)
-UICorner_4.Parent = Hiden
+        return {
+            new = function(newtext)
+                Text.Text = tostring(newtext)
+            end
+        }
+    end,
+    button = function(text, callback)
+        local Button = Instance.new("TextButton")
+        local UICorner_2 = Instance.new("UICorner")
+        local UIStroke = Instance.new("UIStroke")
 
-Title_3.Name = "Title"
-Title_3.Parent = Hiden
-Title_3.AnchorPoint = Vector2.new(0.5, 0.5)
-Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title_3.BackgroundTransparency = 1.000
-Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title_3.BorderSizePixel = 0
-Title_3.Position = UDim2.new(0.5, 0, 0.5, 0)
-Title_3.Size = UDim2.new(0.899999976, 0, 0.200000003, 0)
-Title_3.ZIndex = 11
-Title_3.Font = Enum.Font.RobotoMono
-Title_3.Text = "Loading..."
-Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_3.TextScaled = true
-Title_3.TextSize = 14.000
-Title_3.TextWrapped = true
+        Button.Name = "Button"
+        Button.Parent = ScrollingFrame
+        Button.AnchorPoint = Vector2.new(0.5, 0.5)
+        Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Button.BackgroundTransparency = 0.950
+        Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+        Button.BorderSizePixel = 0
+        Button.Position = UDim2.new(0.5, 0, 0.276470602, 0)
+        Button.Size = UDim2.new(0, 436, 0, 25)
+        Button.Font = Enum.Font.SourceSansBold
+        Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+        Button.TextSize = 15.000
+        Button.Text = tostring(text)
+        
+        UICorner_2.CornerRadius = UDim.new(0, 3)
+        UICorner_2.Parent = Button
+        
+        UIStroke.Parent = Button
+        UIStroke.Transparency = 0.8
+        UIStroke.Color = Color3.fromRGB(255, 255, 255);
+        UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border;
 
+        Button.MouseButton1Click:Connect(callback)
+    end
+}
 
-for i,v:TextButton in ipairs(Log:GetChildren()) do
-	if v:isA('TextButton') then
-		v.MouseEnter:Connect(function()
-			game:GetService('TweenService'):Create(v,TweenInfo.new(0.1),{Size=UDim2.new(0.474071531, 0, 0.453863351, 0)}):Play()
-		end)
-		
-		v.MouseLeave:Connect(function()
-			game:GetService('TweenService'):Create(v,TweenInfo.new(0.1),{Size=UDim2.new(0.444071531, 0, 0.423863351, 0)}):Play()
-		end)
-	end	
+function dragify(Frame, object)
+    dragToggle = nil
+    dragSpeed = .25
+    dragInput = nil
+    dragStart = nil
+    dragPos = nil
+    function updateInput(input)
+        Delta = input.Position - dragStart
+        Position =
+            UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+        game:GetService("TweenService"):Create(object, TweenInfo.new(dragSpeed), {Position = Position}):Play()
+    end
+    Frame.InputBegan:Connect(
+        function(input)
+            if
+                (input.UserInputType == Enum.UserInputType.MouseButton1 or
+                    input.UserInputType == Enum.UserInputType.Touch)
+            then
+                dragToggle = true
+                dragStart = input.Position
+                startPos = object.Position
+                input.Changed:Connect(
+                    function()
+                        if (input.UserInputState == Enum.UserInputState.End) then
+                            dragToggle = false
+                        end
+                    end
+                )
+            end
+        end
+    )
+    Frame.InputChanged:Connect(
+        function(input)
+            if
+                (input.UserInputType == Enum.UserInputType.MouseMovement or
+                    input.UserInputType == Enum.UserInputType.Touch)
+            then
+                dragInput = input
+            end
+        end
+    )
+    game:GetService("UserInputService").InputChanged:Connect(
+    function(input)
+        if (input == dragInput and dragToggle) then
+            updateInput(input)
+        end
+    end
+    )
 end
 
-local function starteffect()
-	game:GetService('TweenService'):Create(Hiden,TweenInfo.new(0.5,Enum.EasingStyle.Quint),{Position=UDim2.new(0.5,0,0.5,0)}):Play()
-	task.spawn(function()
-		task.wait(1)
-		
-		local a= game:GetService('TweenService'):Create(Frame,TweenInfo.new(1,Enum.EasingStyle.Quint,Enum.EasingDirection.In),{Size=UDim2.new(0,0,0,0)})
-		a:Play()
-		a.Completed:Wait()
-		ScreenGui:Destroy()
-	end)
-end
+dragify(Frame, Frame)
 
-New.MouseButton1Click:Connect(function()
-	starteffect()
-	pcall(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/enggg.txt'))(
+
+add.header("Load Script\n تحميل سكربت")
+local textlabel = add.text("Select Script Language\n اختر لغة سكربت")
+add.button("English",function()
+    ScreenGui.Enabled = false
+Alert:create("Script system contact!")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/enggg.txt'))(
        "https://t.me/AstroXHub"
 )
-	end)
 end)
 
-Old.MouseButton1Click:Connect(function()
-	starteffect()
-	pcall(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/Protected_1459779125681128.txt'))(
+add.button("العربيه",function()
+    ScreenGui.Enabled = false
+    Alert:create("يتم اتصال بنظام سكربت!")
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/Protected_1459779125681128.txt'))(
        "https://t.me/AstroXHub"
 ) 
-	end)
 end)
+
+
+add.header("Telegram Server\n سيرفير تليكرام")
+add.button("Copy Telegram Link",function()
+Alert:create("Link copied successfully")
+    setclipboard('https://t.me/SpdmTeamX')
+end)
+
+add.button("نسخ رابط سيرفير تليكرام",function()
+Alert:create("تم نسخ رابط بنجاح")
+    setclipboard('https://t.me/SpdmTeamX');
+end)
+
 
 elseif placeId == 10449761463 then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/AstroXTeam/Scripts/refs/heads/main/fgjkk.txt'))(
