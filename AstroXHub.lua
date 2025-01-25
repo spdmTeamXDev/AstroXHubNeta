@@ -1,4 +1,4 @@
-local TranslationModule = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/loader%20(3).txt')))()
+local TranslationModule = loadstring(game:HttpGet(('https://raw.githubusercontent.com/spdmTeamXDev/Project-/refs/heads/main/Loaderv4.lua'))()
 local placeId = game.PlaceId
 if placeId == 4924922222 then
 local Alert = loadstring(game:HttpGet("https://raw.githubusercontent.com/AstroXTeam/Project-/refs/heads/main/Alert"))()
